@@ -1,0 +1,15 @@
+name: testsv
+description: A web server built using the shelf package.
+version: 0.0.1
+#homepage: https://www.example.com
+#author: kyorohiro <email@example.com>
+
+environment:
+  sdk: '>=2.0.0-dev.15.0'
+
+dependencies:
+  args: ^0.13.7
+  shelf: ^0.6.0
+
+#dev_dependencies:
+#  test: ^0.12.0
