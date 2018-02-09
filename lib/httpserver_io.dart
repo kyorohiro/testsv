@@ -57,7 +57,7 @@ class HttpHandle extends umi.HttpHandle {
 
 class HttpRequest extends umi.HttpRequest {
   String get method => _rawrequest.method;
-  Uri get path => _rawrequest.uri;
+  Uri get uri => _rawrequest.uri;
   Map<String,List<String>> _headers = {};
   Map<String, List<String>> get header => this._headers;
   Stream<List<int>> get data => this._rawrequest;
@@ -84,4 +84,7 @@ class HttpResponse extends umi.HttpResponse {
     return this;
   }
 
+  void addHeader(String name, String value) {
+    _rawresponse.headers.add(name, value);
+  }
 }
